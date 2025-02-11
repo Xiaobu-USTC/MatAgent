@@ -1,0 +1,119 @@
+{
+    "model": {
+        "type_map": [
+            "N",
+            "H"
+        ],
+        "descriptor": {
+            "type": "se_e2_a",
+            "sel": [
+                40,
+                120
+            ],
+            "rcut_smth": 0.5,
+            "rcut": 6.0,
+            "neuron": [
+                25,
+                50,
+                100
+            ],
+            "resnet_dt": false,
+            "axis_neuron": 16,
+            "seed": 1,
+            "activation_function": "tanh",
+            "type_one_side": false,
+            "precision": "default",
+            "trainable": true,
+            "exclude_types": [],
+            "env_protection": 0.0,
+            "set_davg_zero": false
+        },
+        "fitting_net": {
+            "neuron": [
+                240,
+                240,
+                240
+            ],
+            "resnet_dt": true,
+            "seed": 1,
+            "type": "ener",
+            "numb_fparam": 0,
+            "numb_aparam": 0,
+            "activation_function": "tanh",
+            "precision": "default",
+            "trainable": true,
+            "rcond": null,
+            "atom_ener": [],
+            "use_aparam_as_mask": false
+        },
+        "data_stat_nbatch": 10,
+        "data_stat_protect": 0.01,
+        "data_bias_nsample": 10,
+        "pair_exclude_types": [],
+        "atom_exclude_types": [],
+        "preset_out_bias": null,
+        "srtab_add_bias": true,
+        "type": "standard"
+    },
+    "learning_rate": {
+        "type": "exp",
+        "decay_steps": 50,
+        "start_lr": 0.001,
+        "stop_lr": 3.51e-08,
+        "scale_by_worker": "linear",
+        "decay_rate": null
+    },
+    "loss": {
+        "type": "ener",
+        "start_pref_e": 0.02,
+        "limit_pref_e": 1,
+        "start_pref_f": 1000,
+        "limit_pref_f": 1,
+        "start_pref_v": 0,
+        "limit_pref_v": 0,
+        "start_pref_ae": 0.0,
+        "limit_pref_ae": 0.0,
+        "start_pref_pf": 0.0,
+        "limit_pref_pf": 0.0,
+        "enable_atom_ener_coeff": false,
+        "start_pref_gf": 0.0,
+        "limit_pref_gf": 0.0,
+        "numb_generalized_coord": 0
+    },
+    "training": {
+        "training_data": {
+            "systems": [
+                "npy_data"
+            ],
+            "batch_size": "auto",
+            "auto_prob": "prob_sys_size",
+            "sys_probs": null
+        },
+        "validation_data": {
+            "systems": [
+                "npy_data"
+            ],
+            "batch_size": "auto",
+            "numb_btch": 1,
+            "auto_prob": "prob_sys_size",
+            "sys_probs": null
+        },
+        "numb_steps": 10000,
+        "seed": 10,
+        "disp_file": "lcurve.out",
+        "disp_freq": 200,
+        "save_freq": 1000,
+        "save_ckpt": "model.ckpt",
+        "max_ckpt_keep": 5,
+        "change_bias_after_training": false,
+        "disp_training": true,
+        "time_training": true,
+        "profiling": false,
+        "profiling_file": "timeline.json",
+        "enable_profiler": false,
+        "tensorboard": false,
+        "tensorboard_log_dir": "log",
+        "tensorboard_freq": 1,
+        "opt_type": "Adam"
+    }
+}

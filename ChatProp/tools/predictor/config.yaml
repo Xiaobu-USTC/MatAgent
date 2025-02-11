@@ -1,0 +1,101 @@
+# ------------------------------
+# Base input parameter for PWDFT
+# ------------------------------
+
+# Mixing_Variable:  potential; density
+Mixing_Variable               : potential
+# Mixing_Type:  anderson; kerker+anderson; broyden
+Mixing_Type                   : anderson
+Mixing_StepLength             : 0.8
+Mixing_MaxDim                 : 9
+Ecut_Wavefunction             : 40.0
+
+Output_Density                : 0
+Output_Wfn                    : 0
+Restart_Density               : 0
+Restart_Wfn                   : 0
+
+Temperature                   : 300.0
+Density_Grid_Factor           : 2.0
+# Smearing_Scheme:  FD; GB; MP
+Smearing_Scheme               : FD
+Extra_Electron                : 0
+
+VDW_Type                      : None
+
+# Pseudo_Type:  HGH; ONCV
+Pseudo_Type                   : ONCV
+PeriodTable:
+UPF_File:
+   -  Cs_ONCV_PBE-1.0.upf
+   -  Pb_ONCV_PBE-1.0.upf
+   -  Cl_ONCV_PBE-1.0.upf
+
+Use_VLocal                    : 0
+Use_Atom_Density              : 0
+
+# XC_Type:  XC_LDA_XC_TETER93
+# XC_Type:  XC_GGA_XC_PBE
+# XC_Type:  XC_HYB_GGA_XC_PBE
+# XC_Type:  XC_HYB_GGA_XC_HSE06
+XC_Type                       : XC_LDA_XC_TETER93
+
+# ------------------------------
+# Iteration parameter for PWDFT
+# ------------------------------
+
+SCF_Inner_Tolerance           : 1e-4
+SCF_Inner_MinIter             : 1
+SCF_Inner_MaxIter             : 1
+
+SCF_Outer_Tolerance           : 1e-6
+SCF_Outer_MinIter             : 3
+SCF_Outer_MaxIter             : 30
+
+Calculate_Force_Each_SCF      : 0
+
+Eig_Tolerance                 : 1e-20
+Eig_MaxIter                   : 3
+Eig_Min_Tolerance             : 1e-3
+Eig_MinIter                   : 2
+
+# PW_Solver:  LOBPCG
+# PW_Solver:  PPCG
+# PW_Solver:  CheFSI
+# PW_Solver:  LOBPCGScaLAPACK
+# PW_Solver:  PPCGScaLAPACK
+PW_Solver                     : LOBPCG
+
+PPCGsbSize                    : 1
+ScaLAPACK_Block_Size          : 32
+
+# ------------------------------
+# POSCAR for PWDFT
+# ------------------------------
+
+Output_Position               : 1
+Atom_Types_Num                : 3
+Atom_Type                     : [ 55, 82, 17 ]
+Atom_Num                      : [ 4, 4, 12 ]
+Super_Cell                    : [ 21.010473, 21.040954, 10.891561 ]
+Atom_Red                      :  
+  -  [ 0.0000000000 ,  0.9949888800 ,  0.5000000000 ]
+  -  [ 0.5000000000 ,  0.9897937000 ,  0.5000000000 ]
+  -  [ 0.5000000000 ,  0.4949888800 ,  0.5000000000 ]
+  -  [ 0.0000000000 ,  0.4897937000 ,  0.5000000000 ]
+  -  [ 0.2506403550 ,  0.2427904250 ,  0.0000000000 ]
+  -  [ 0.2493596450 ,  0.7427904250 ,  0.0000000000 ]
+  -  [ 0.7506403550 ,  0.7427904250 ,  0.0000000000 ]
+  -  [ 0.7493596450 ,  0.2427904250 ,  0.0000000000 ]
+  -  [ 0.1913510200 ,  0.4932360800 ,  0.0000000000 ]
+  -  [ 0.2489473450 ,  0.7406607450 ,  0.5000000000 ]
+  -  [ 0.2510526550 ,  0.2406607450 ,  0.5000000000 ]
+  -  [ 0.0000000000 ,  0.8046091700 ,  0.0000000000 ]
+  -  [ 0.5000000000 ,  0.6852307600 ,  0.0000000000 ]
+  -  [ 0.3086489800 ,  0.9932360800 ,  0.0000000000 ]
+  -  [ 0.6913510200 ,  0.9932360800 ,  0.0000000000 ]
+  -  [ 0.7489473450 ,  0.2406607450 ,  0.5000000000 ]
+  -  [ 0.7510526550 ,  0.7406607450 ,  0.5000000000 ]
+  -  [ 0.5000000000 ,  0.3046091700 ,  0.0000000000 ]
+  -  [ 0.0000000000 ,  0.1852307600 ,  0.0000000000 ]
+  -  [ 0.8086489800 ,  0.4932360800 ,  0.0000000000 ]

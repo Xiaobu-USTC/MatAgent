@@ -1,0 +1,234 @@
+/* 通用样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    height: 100vh;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: 300px;
+    background: #f4f3ee;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.agent-info {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.agent-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.mode-selection {
+    margin-bottom: 20px;
+}
+
+.mode-selection h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#mode-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.mode-config {
+    margin-bottom: 20px;
+}
+
+.mode-config input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.mode-config button {
+    width: 100%;
+    padding: 10px;
+    background: #f1c868;
+    border: none;
+    border-radius: 4px;
+    color: #000000;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.mode-config button:hover {
+    background: #2472a3;
+}
+
+.available-tools {
+    margin-top: auto; 
+}
+
+.available-tools h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.tools-container {
+    max-height: 360px; 
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool {
+    display: flex;
+    flex-direction: column;
+    background: #ecebe6;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    height: 80px; 
+    box-sizing: border-box;
+}
+
+.tool-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.tool-name::before {
+    content: '✅';
+    margin-right: 5px;
+    color: #000000;
+}
+
+.tool-description {
+    font-size: 14px;
+    color: #80817e;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+.chat-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: #ffffff;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-header img {
+    max-height: 120px; 
+    max-width: 100%;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f0f0f0;
+}
+
+.message {
+    max-width: 70%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.message.user {
+    background: #ffffff;
+    margin-left: auto;
+    text-align: right;
+}
+
+.message.bot {
+    background: #ffffff;
+    margin-right: auto;
+    border: 1px solid #ddd;
+}
+
+.chat-input-area {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 10px solid #ddd;
+    margin-right: 1px;
+    font-size: 14px;
+}
+
+.chat-input-area button {
+    padding: 10px 20px;
+    background: #b4b4b4;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.chat-input-area button:hover {
+    background: #727272;
+}
+
+.chat-input-area button img {
+    width: 100px; 
+    height: 100px; 
+}
+
+.tools-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tools-container::-webkit-scrollbar-thumb {
+    background-color: rgba(102, 103, 105, 0.884);
+    border-radius: 3px;
+}
+
+.tools-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
