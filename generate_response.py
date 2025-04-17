@@ -5,9 +5,9 @@ os.environ["CUDA_VISIBLE_DEVICES"]='0'
 import copy
 from langchain.callbacks import StdOutCallbackHandler
 from langchain.callbacks.manager import CallbackManager
-from ChatProp.models_load import ModelsLoad
-from ChatProp.config import config as config_default
-from ChatProp.agent.chem_agent import ChemAgent
+from MatAgent.models_load import ModelsLoad
+from MatAgent.config import config as config_default
+from MatAgent.agent.chem_agent import ChemAgent
 
 def generate_response(question, model='gpt-4', temperature=0):
     config = copy.deepcopy(config_default)
